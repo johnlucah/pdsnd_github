@@ -11,4 +11,4 @@ You will compare the system usage between three large cities: Chicago, New York 
 Run the script `bikeshare.py` and answer the questions to compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
 
 ## License
-Copyright (c) 2022 John
+Copyright (c) 2022 Johnlucah
