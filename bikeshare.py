@@ -20,7 +20,6 @@ def read_option(options, input_message):
     Returns:
         (list) options - list of available options
         (str) input_message - message showed to user when requesting for input
-        (function) parse_func - function used to parse the user input
     """
 
     selected_option = ''
