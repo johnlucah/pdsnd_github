@@ -13,7 +13,7 @@ MONTH_DICT = dict([(v.lower(), i) for i, v in enumerate(cal.month_name) if i > 0
 
 WEEK_DAY_DICT = dict([(v.lower(), i) for i, v in enumerate(cal.day_name)])
 
-def read_option(options, input_message, parse_func):
+def read_option(options, input_message):
     """
     Reads an option that must be defined in the options list (options).
 
@@ -26,7 +26,7 @@ def read_option(options, input_message, parse_func):
     selected_option = ''
     while selected_option == '':
         try:
-            selected_option = parse_func(input(input_message))
+            selected_option = input(input_message).strip().lower()
         except:
             pass
 
@@ -50,22 +50,19 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     options = CITY_DATA
     input_message = '\nPlease, type the city you would like to analyze ({}): \n'.format(", ".join(map(lambda x: x.title(), options)))
-    parse_func = lambda x: str(x.strip()).lower()
-    city = read_option(options, input_message, parse_func)
+    city = read_option(options, input_message)
 
     # get user input for month (all, january, february, ... , june)
     options = MONTH_DICT
     options['all'] = -1
     input_message = '\nPlease, type the month you would like to filter ({}): \n'.format(", ".join(map(lambda x: x.title(), options)))
-    parse_func = lambda x: str(x.strip()).lower()
-    month = MONTH_DICT[read_option(options, input_message, parse_func)]
+    month = MONTH_DICT[read_option(options, input_message)]
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     options = WEEK_DAY_DICT
     options['all'] = -1
     input_message = '\nPlease, type the day of the week ({}): \n'.format(", ".join(map(lambda x: x.title(), options)))
-    parse_func = lambda x: str(x.strip()).lower()
-    day = WEEK_DAY_DICT[read_option(options, input_message, parse_func)]
+    day = WEEK_DAY_DICT[read_option(options, input_message)]
 
     print('-'*40)
     return city, month, day
