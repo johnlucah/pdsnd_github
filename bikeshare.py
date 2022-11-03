@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 import calendar as cal
+import tabulate as tab
 from IPython.display import display
 
 CITY_DATA = { 'chicago': 'chicago.csv',
@@ -221,7 +222,7 @@ def main():
         page_size = 5
         show_data = input('\nWould you like to see the raw data ? Enter yes or no.\n').lower() == 'yes'
         while show_data:
-            display(df[(page_count * page_size):min((page_count * page_size) + page_size, len(df))])
+            print(tab.tabulate(df[(page_count * page_size):min((page_count * page_size) + page_size, len(df))]))
             page_count += 1
             if (page_count * page_size) >= len(df):
                 print ('Nothing more to display')
