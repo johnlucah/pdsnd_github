@@ -1,16 +1,30 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
 ### Date created
-Include the date you created this project and README file.
+This project was created on 2022-11-02
 
-### Project Title
-Replace the Project Title
+### ! BIKESHARE !
 
 ### Description
-Describe what your project is about and what it does
+A python script to analyze bike riders data from `Motivate`, a bike share system provider for many major cities in the United States.
+
+Compatible with Python >=3.9.12
+
+You will compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
+
+Run the script `bikeshare.py` and answer the questions to compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
 
 ### Files used
-Include the files used
+
+```
+C:.
+|   .gitignore
+|   bikeshare.py
+|   README.md
+|
+\---.github
+    \---workflows
+            manual.yml
+```
+
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+[Udacity](https://www.udacity.com/)
